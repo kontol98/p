@@ -9,11 +9,11 @@
    ],
    "description": "An Anime themed Telegram group management bot.",
    "env": {
-      "ALLOW_EXCL": {
+      "OWNER_ID": {
          "description": "Set this to True if you want ! to be a command prefix along with /",
-         "value": "True"
+         "value": ""
       },
-      "BAN_STICKER": {
+      "MESSAGE_DUMP": {
          "description": "ID of the sticker you want to use when banning people.",
          "required": false,
          "value": ""
@@ -44,7 +44,7 @@
          "description": "Your username",
          "value": "AnimeKaizoku"
       },
-      "DEV_USERS": {
+      "API_HASH": {
          "description": "ID of users who are Dev (can use /py etc.)",
          "required": false,
          "value": "660565862 792109647"
@@ -53,9 +53,9 @@
          "description": "Gban log channel, include the hyphen too: ex: -123456",
          "value": "-123"
       },
-      "CASH_API_KEY": {
+      "API_ID": {
          "description": "Required for currency converter",
-         "value": "-xyz"
+         "value": ""
       },
       "TIME_API_KEY": {
          "description": "Required for timezone information",

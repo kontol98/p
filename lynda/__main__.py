@@ -41,7 +41,7 @@ from lynda import (
     URL,
     LOGGER,
     SARDEGNA_USERS,
-    WHITELIST_CHATS,
+    TIGER_USERS,
 )
 
 # needed to dynamically load modules

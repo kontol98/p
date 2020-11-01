@@ -39,11 +39,40 @@ from lynda.modules.helper_funcs.chat_status import is_user_admin
 from lynda.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am an Anime themed group management bot with some fun extras [;)](https://telegra.ph/file/ec3e5aec2ef8fbc9ccdcb.jpg)
+Hey there! My Name is **Rias Gremory**.
+Any questions on how to use me? use /help
 
-You can find the list of available commands with /help.
+Join Our [Group](https://t.me/PXGI_GRUP) If You wanna Report Issue 🙂
+
+I'm here to make your group management fun and easy!
+I have lots of handy features ☺️ such as :
+
+• flood control.         • Note'S keeping system.
+• Warning System.   • Predetermined Filters.
+
+*Managed With ❤️ By :* [UserbotIndo Team](https://t.me/userbotindo)
+
+Wanna Add me to your Group? Just click the button below!
 """
+
+buttons = [
+    [
+        InlineKeyboardButton(
+            text="Add to Group 👥", url="t.me/Onechanubot?startgroup=true"
+        ),
+        InlineKeyboardButton(
+            text="Gban Logs 🚫", url="https://t.me/PXGI_GRUP"
+        ),
+    ]
+]
+
+
+buttons += [[InlineKeyboardButton(text="Help & Commands ❔",
+                                  url=f"t.me/{dispatcher.bot.username}?start=help"),
+             InlineKeyboardButton(text="Support Group 🎗️",
+                                  url="https://t.me/PXGI_GRUP"),
+             ]]
+
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.

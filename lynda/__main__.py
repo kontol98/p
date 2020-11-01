@@ -40,7 +40,7 @@ from lynda import (
     PORT,
     URL,
     LOGGER,
-    BLACKLIST_CHATS,
+    SARDEGNA_USERS,
     WHITELIST_CHATS,
 )
 

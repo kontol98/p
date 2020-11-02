@@ -691,7 +691,7 @@ def main():
                     "rb"))
         else:
             updater.bot.set_webhook(url=URL + TOKEN)
-            client.run_until_disconnected()
+            telethn.run_until_disconnected()
 
     else:
         LOGGER.info("Using long polling.")
@@ -699,7 +699,7 @@ def main():
         updater.bot.send_message(
             chat_id=MESSAGE_DUMP,
             text="Asisten Bot Started...")
-        client.run_until_disconnected()
+        telethn.run_until_disconnected()
 
     updater.idle()
 

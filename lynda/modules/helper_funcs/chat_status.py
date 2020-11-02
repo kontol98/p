@@ -17,8 +17,8 @@
 from functools import wraps
 from telegram import User, Chat, ChatMember
 
-from ubotindo import DEL_CMDS, DEV_USERS, SUDO_USERS, WHITELIST_USERS
-from ubotindo.mwt import MWT
+from lynda import DEL_CMDS, DEV_USERS, SUDO_USERS, WHITELIST_USERS
+from lynda.mwt import MWT
 
 
 def can_delete(chat: Chat, bot_id: int) -> bool:

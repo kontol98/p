@@ -3,6 +3,7 @@ from lynda.modules.helper_funcs.telethn.chatstatus import user_is_admin
 from lynda.modules.helper_funcs.telethn.chatstatus import can_delete_messages
 from lynda.lyn import lyndabot
 
+from lynda import DEV_USERS, SUDO_USERS, telethn
 
 @lyndabot(pattern="^/purge")
 async def purge_messages(event):

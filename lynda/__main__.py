@@ -47,6 +47,7 @@ from lynda import (
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from lynda.modules import ALL_MODULES
+from lynda.modules.purge import telethn
 from lynda.modules.helper_funcs.chat_status import is_user_admin
 from lynda.modules.helper_funcs.filters import CustomFilters
 from lynda.modules.helper_funcs.misc import paginate_modules

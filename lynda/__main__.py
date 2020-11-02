@@ -617,7 +617,7 @@ def migrate_chats(update, context):
 
 
 def is_chat_allowed(update, context):
-    if len(WHITELIST_CHATS) != 0:
+    if len(WHITELIST_USERS) != 0:
         chat_id = update.effective_message.chat_id
         if chat_id not in WHITELIST_CHATS:
             context.bot.send_message(

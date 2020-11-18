@@ -46,26 +46,88 @@ You can find the list of available commands with /help.
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm a part of *Eagle Union*
-Have a look at the following for an idea of some of \
+Hey there! my name is *{dispatcher.bot.first_name}*.
+Any questions on how to use me? use /help
+
+Join Our [Group](https://t.me/userbotindo) If You wanna Report Issue 🙂
+
+I'm here to make your group management fun and easy!
+I have lots of handy features ☺️ such as :
+
+• flood control.         • Note'S keeping system.
+• Warning System.   • Predetermined Filters.
+
+*Managed With ❤️ By :* [UserbotIndo Team](https://t.me/userbotindo)
+
+Wanna Add me to your Group? Just click the button below!
+"""
+
+buttons = [
+    [
+        InlineKeyboardButton(
+            text="Add to Group 👥", url="t.me/userbotindobot?startgroup=true"
+        ),
+        InlineKeyboardButton(
+            text="Gban Logs 🚫", url="https://t.me/UserIndoBotBannedLog"
+        ),
+    ]
+]
+
+
+buttons += [[InlineKeyboardButton(text="Help & Commands ❔",
+                                  url=f"t.me/{dispatcher.bot.username}?start=help"),
+             InlineKeyboardButton(text="Support Group 🎗️",
+                                  url="https://t.me/userbotindo"),
+             ]]
+
+
+HELP_STRINGS = f"""
+Hello there! My name is *{dispatcher.bot.first_name}*.
+I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
 the things I can help you with.
+
 *Main* commands available:
- - /start: start the bot
- - /help: PM's you this message.
- - /help <module name>: PM's you info about that module.
- - /settings:
-   - in PM: will send you your settings for all supported modules.
+ × /start: Starts me, can be used to check i'm alive or no...
+ × /help: PM's you this message.
+ × /help <module name>: PM's you info about that module.
+ × /settings: in PM: will send you your settings for all supported modules.
    - in a group: will redirect you to pm, with all that chat's settings.
-{}
-And the following:
-""".format(
-    dispatcher.bot.first_name,
-    "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
-)
+ \nClick on the buttons below to get documentation about specific modules!"""
 
 
-KURUMI_IMG = "https://telegra.ph/file/96f35a9c15df3b5817925.jpg"
+STAFF_HELP_STRINGS = """Hey there staff users. Nice to see you :)
+Here is all the staff's commands. Users above has the command access for all commands below.
+
+*OWNER*
+× /broadcast: Send a broadcast message to all chat that i'm currently in.
+× /staffids: Get all staff's you have.
+× /ip: Sends the bot's IP address to ssh in if necessary (PM only).
+
+*DEV USERS*
+× /gitpull: Pull latest update.
+× /reboot: Restart the bot.
+× /dbcleanup: Clean my invalid database.
+× /leavemutedchats: Leave all chats where i can't send message.
+× /leave <chatid>: Tell me to leave the given group. (alias /leavechat /leavegroup).
+× /stats: List of all blacklists, filters, federations, gbans, etc from all group.
+× /getlink <chatid>: Get chat invite link.
+× /sysinfo: Get my system info.
+
+*SUDO USERS*
+× /snipe <chatid> <string>: Tell me to send a message to the given chat.
+× /echo <string>: Like snipe but on the current chat.
+× /chatlist: Get the list of chat that i'm currently in.
+× /ping: Start a ping test.
+× /speedtest: Start a speedtest from my server.
+
+*SUPPORT USERS*
+× /gban <userid>: global ban a user.
+× /ungban <userid>: remove currently gbanned user.
+× /gbanlist: Get the list of currently gbanned users."""
+
+
+
+KONTOL = "https://telegra.ph/file/abe3a33b4d858732c51f4.jpg"
 
 DONATE_STRING = """I'm free for everyone!! """
 

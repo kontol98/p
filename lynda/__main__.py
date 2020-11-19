@@ -39,11 +39,37 @@ from lynda.modules.helper_funcs.chat_status import is_user_admin
 from lynda.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am an Anime themed group management bot with some fun extras [;)](https://telegra.ph/file/ec3e5aec2ef8fbc9ccdcb.jpg)
+Hey there! my name is *{}*.
+Any questions on how to use me? use /help
 
-You can find the list of available commands with /help.
+Join Our [Group](https://t.me/pxgi_grup) If You wanna Report Issue 🙂
+
+I'm here to make your group management fun and easy!
+I have lots of handy features ☺️ such as :
+
+• flood control.         • Note'S keeping system.
+• Warning System.   • Predetermined Filters.
+
+Wanna Add me to your Group? Just click the button below!
 """
+
+buttons = [
+    [
+        InlineKeyboardButton(
+            text="Add to Group 👥", url="t.me/onechanubot?startgroup=true"
+        ),
+        InlineKeyboardButton(
+            text="Gban Logs 🚫", url="https://t.me/pxgi_grup"
+        ),
+    ]
+]
+
+
+buttons += [[InlineKeyboardButton(text="Help & Commands ❔",
+                                  url=f"t.me/{dispatcher.bot.username}?start=help"),
+             InlineKeyboardButton(text="Support Group 🎗️",
+                                  url="https://t.me/pxgi_grup"),
+             ]]
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
@@ -65,7 +91,7 @@ And the following:
 )
 
 
-KURUMI_IMG = "https://telegra.ph/file/96f35a9c15df3b5817925.jpg"
+KURUMI_IMG = "https://telegra.ph/file/abe3a33b4d858732c51f4.jpg"
 
 DONATE_STRING = """I'm free for everyone!! """
 
@@ -166,13 +192,13 @@ def start(bot: Bot, update: Update, args: List[str]):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="Add Kurumi to your group",
+                            text="Add OneChanUbot to your group",
                             url="t.me/{}?startgroup=true".format(bot.username))
                     ],
                     [
                         InlineKeyboardButton(
                             text="Support Group",
-                            url=f"https://t.me/xbotgroup"),
+                            url=f"https://t.me/pxgi_grup"),
                         InlineKeyboardButton(
                             text="Subs My Channel",
                             url="https://t.me/xpianimevideo")
@@ -181,7 +207,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                        
                     ]]))
     else:
-        update.effective_message.reply_text("Hi, I'm Kurumi.")
+        update.effective_message.reply_text("Sending you a warm hi & wishing your day is a happy one! .")
 
 
 # for test purposes
